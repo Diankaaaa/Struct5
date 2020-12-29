@@ -171,39 +171,7 @@ namespace Struct5
         //Вывод сведений о студентах
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            try
-            {
-
-                for (int i = 0; i < count; i++)
-                {
-                    int s = 0;
-                    int[] average = new int[7];
-                    foreach (int j in students[i].academic_perfomance)
-                    {
-                        s += j;
-                    }
-                    s = s / 4;
-                    s += average[i];
-
-
-                    string st = " ";
-                    st += string.Join("",students[i].academic_perfomance);
-                    int f = Convert.ToInt32(st);
-                    int f1 = f / 1000;
-                    int f2 = (f / 100) % 10;
-                    int f3 = (f / 100) % 10;
-                    int f4 = f % 10;
-
-                            if (f1 == 4 || f1 == 5 && f2 == 4 || f2 == 5 && f3 == 4 || f3 == 5 && f4 == 4 || f4 == 5) {
-                                OUTPUT.Text += students[i].fio + Environment.NewLine + "Оценки: " + f + Environment.NewLine + "Номер группы: " + students[i].group_number + Environment.NewLine + "Средний балл: " + s + Environment.NewLine + Environment.NewLine;
-                            }
-                    s = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         //Удалить студента с самым низким баллом

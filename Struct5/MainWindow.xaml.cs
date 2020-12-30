@@ -136,7 +136,7 @@ namespace Struct5
                     s = s / 4;
                     s += average[i];
                     s = 0;
-
+                }
                     //Сортировка пузырьком
                     for (int d = 0; d < count - 1; d++)
                     {
@@ -151,7 +151,7 @@ namespace Struct5
                             }
                         }
                     }
-                }
+          
                 Student.Items.Clear();
                 for (int i = 0; i < count; i++) Student.Items.Add(students[i].fio);
             }

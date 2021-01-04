@@ -24,6 +24,7 @@ namespace Struct5
         public string fio;
         public int group_number;
         public int[] academic_perfomance;
+        public int[] average_score;
     }
     public partial class MainWindow : Window
     {
@@ -123,6 +124,7 @@ namespace Struct5
         //Сортировка по убыванию среднего балла
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            //Average ball
             int s = 0;
             int[] average = new int[7];
             try
@@ -134,24 +136,26 @@ namespace Struct5
                         s += j;
                     }
                     s = s / 4;
-                    s += average[i];
+                    students[i].average_score[i] = s;
                     s = 0;
-
-                    //Сортировка пузырьком
-                    for (int d = 0; d < count - 1; d++)
-                    {
-                        for (int j = d + 1; j < count; j++)
-                        {
-                            if (average[d] < average[j])
-                            {
-                                Student p = new Student();
-                                p = students[i];
-                                students[j] = students[d];
-                                students[d] = p;
-                            }
-                        }
-                    }
                 }
+                OUTPUT.Text += string.Join("", students[i].average_score);
+
+                ////Сортировка пузырьком
+                //for (int d = 0; d < count - 1; d++)
+                //{
+                //    for (int j = d + 1; j < count; j++)
+                //    {
+                //        if (students[i].average_score[d] < students[i].average_score[j])
+                //        {
+                //            Student p = new Student();
+                //            p = students[i];
+                //            students[j] = students[d];
+                //            students[d] = p;
+                //        }
+                //    }
+                //}
+
                 Student.Items.Clear();
                 for (int i = 0; i < count; i++) Student.Items.Add(students[i].fio);
             }

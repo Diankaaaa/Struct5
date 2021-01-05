@@ -142,7 +142,8 @@ namespace Struct5
                 //Сортировка пузырьком
                 for (int d = 0; d < count - 1; d++)
                 {
-                    for (int j = d + 1; j < count; j++) { 
+                    for (int j = d + 1; j < count; j++)
+                    {
                         if (students[i].average_score[d] < students[i].average_score[j])
                         {
                             Student p = new Student();
@@ -150,8 +151,8 @@ namespace Struct5
                             students[j] = students[d];
                             students[d] = p;
                         }
+                    }
                 }
-            }
                 Student.Items.Clear();
                 for (int i = 0; i < count; i++) Student.Items.Add(students[i].fio);
             }

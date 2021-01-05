@@ -20,10 +20,10 @@
         <ListBox x:Name="Student" Grid.Row="1" Margin="10,10,0,10" HorizontalAlignment="Left" Width="252" Background="#FF3E3E42" Foreground="White" FontSize="16"/>
         <TextBlock x:Name="OUTPUT" Grid.Row="1" Margin="286,10,10,9" Background="#FF3E3E42" FontSize="16" Foreground="White"/>
 
-        <Button Grid.Row="2" Content="Средний балл" Click="Button_Click_1" Margin="10,0,433,0" Foreground="White" Background="#FF3E3E42" FontSize="16"/>
-        <Button Grid.Row="2" Content="Сортировка" Margin="124,0,328,0" Click="Button_Click_2" FontSize="16" Background="#FF3E3E42" Foreground="White"/>
-        <Button Grid.Row="2" Content="Вывод сведений" Margin="229,0,193,0" Foreground="White" Background="#FF3E3E42" FontSize="16" Click="Button_Click_4"/>
-        <Button Grid.Row="2" Content="Удалить" Margin="364,1,121,-1" Background="#FF3E3E42" Foreground="White" FontSize="16" Grid.RowSpan="2" Click="Button_Click_5"/>
-        <Button Grid.Row="2" Content="Очистить" Margin="447,0,10,-2" Foreground="White" Background="#FF3E3E42" FontSize="16" Grid.RowSpan="2" Click="Button_Click_3"/>
+        <Button Grid.Row="2" Content="Средний балл" Click="Button_Click_1" Margin="10,0,433,5" Foreground="White" Background="#FF3E3E42" FontSize="16"/>
+        <Button Grid.Row="2" Content="Сортировка" Margin="124,0,328,5" Click="Button_Click_2" FontSize="16" Background="#FF3E3E42" Foreground="White"/>
+        <Button Grid.Row="2" Content="Вывод сведений" Margin="229,0,193,5" Foreground="White" Background="#FF3E3E42" FontSize="16" Click="Button_Click_4"/>
+        <Button Grid.Row="2" Content="Удалить" Margin="364,1,121,5" Background="#FF3E3E42" Foreground="White" FontSize="16" Grid.RowSpan="2" Click="Button_Click_5"/>
+        <Button Grid.Row="2" Content="Очистить" Margin="447,0,10,5" Foreground="White" Background="#FF3E3E42" FontSize="16" Grid.RowSpan="2" Click="Button_Click_3"/>
     </Grid>
 </Window>

@@ -24,6 +24,7 @@ namespace Struct5
         public string fio;
         public int group_number;
         public int[] academic_perfomance;
+        public int[] average_score;
     }
     public partial class MainWindow : Window
     {
@@ -96,9 +97,8 @@ namespace Struct5
         //Вычисление среднего балла
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           
+
             int s = 0;
-            int[] average = new int[7];
             try
             {
                 for (int i = 0; i < count; i++)
@@ -108,8 +108,6 @@ namespace Struct5
                         s += j;
                     }
                     s = s / 4;
-                    s += average[i];
-
                     OUTPUT.Text += students[i].fio + Environment.NewLine + "Оценки: " + string.Join(" ", students[i].academic_perfomance) + Environment.NewLine + "Средний балл: " + s + Environment.NewLine + Environment.NewLine;
                     s = 0;
                 }
@@ -124,7 +122,6 @@ namespace Struct5
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             int s = 0;
-            int[] average = new int[7];
             try
             {
                 for (int i = 0; i < count; i++)
@@ -134,20 +131,20 @@ namespace Struct5
                         s += j;
                     }
                     s = s / 4;
-                    s += average[i];
+                    students[i].average_score[i] = s;
                     s = 0;
                 }
                     //Сортировка пузырьком
-                    for (int d = 0; d < count - 1; d++)
+                    for (int i = 0; i < count - 1; i++)
                     {
-                        for (int j = d + 1; j < count; j++)
+                        for (int j = i + 1; j < count; j++)
                         {
-                            if (average[d] < average[j])
+                            if (students[i].average_score[i] < students[i].average_score[j])
                             {
                                 Student p = new Student();
                                 p = students[i];
-                                students[j] = students[d];
-                                students[d] = p;
+                                students[i] = students[j];
+                                students[j] = p;
                             }
                         }
                     }
@@ -171,7 +168,7 @@ namespace Struct5
         //Вывод сведений о студентах
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-           
+            
         }
 
         //Удалить студента с самым низким баллом
